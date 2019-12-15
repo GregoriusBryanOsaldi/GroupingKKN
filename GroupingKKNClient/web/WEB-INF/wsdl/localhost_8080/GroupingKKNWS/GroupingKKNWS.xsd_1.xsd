@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://WebServices/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WebServices/">
+
+<xs:element name="addDataGroup" type="tns:addDataGroup"/>
+
+<xs:element name="addDataMahasiswa" type="tns:addDataMahasiswa"/>
+
+<xs:element name="addDataMahasiswaResponse" type="tns:addDataMahasiswaResponse"/>
+
+<xs:element name="addUser" type="tns:addUser"/>
+
+<xs:element name="bacaInformasiKKN" type="tns:bacaInformasiKKN"/>
+
+<xs:element name="bacaInformasiKKNResponse" type="tns:bacaInformasiKKNResponse"/>
+
+<xs:element name="cekUser" type="tns:cekUser"/>
+
+<xs:element name="cekUserResponse" type="tns:cekUserResponse"/>
+
+<xs:element name="createGroupKKN" type="tns:createGroupKKN"/>
+
+<xs:element name="deleteDataGroup" type="tns:deleteDataGroup"/>
+
+<xs:element name="deleteDataMahasiswa" type="tns:deleteDataMahasiswa"/>
+
+<xs:element name="editDataGroup" type="tns:editDataGroup"/>
+
+<xs:element name="editDataMahasiswa" type="tns:editDataMahasiswa"/>
+
+<xs:element name="editDataMahasiswaResponse" type="tns:editDataMahasiswaResponse"/>
+
+<xs:element name="getListGroup" type="tns:getListGroup"/>
+
+<xs:element name="getListGroupResponse" type="tns:getListGroupResponse"/>
+
+<xs:element name="getListMahasiswa" type="tns:getListMahasiswa"/>
+
+<xs:element name="getListMahasiswaResponse" type="tns:getListMahasiswaResponse"/>
+
+<xs:element name="simpanInformasiKKN" type="tns:simpanInformasiKKN"/>
+
+<xs:complexType name="simpanInformasiKKN">
+<xs:sequence>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDataGroup">
+<xs:sequence>
+<xs:element name="group" type="tns:kelompok" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="kelompok">
+<xs:sequence>
+<xs:element name="desa" type="xs:string" minOccurs="0"/>
+<xs:element name="idKelompok" type="xs:string" minOccurs="0"/>
+<xs:element name="kabupaten" type="xs:string" minOccurs="0"/>
+<xs:element name="kecamatan" type="xs:string" minOccurs="0"/>
+<xs:element name="pedukuhan" type="xs:string" minOccurs="0"/>
+<xs:element name="provinsi" type="xs:string" minOccurs="0"/>
+<xs:element name="tingkatanDaerah" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDataMahasiswa">
+<xs:sequence>
+<xs:element name="mahasiswa" type="tns:mahasiswa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mahasiswa">
+<xs:sequence>
+<xs:element name="agama" type="xs:string" minOccurs="0"/>
+<xs:element name="alamat" type="xs:string" minOccurs="0"/>
+<xs:element name="beratBadan" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="fakultas" type="xs:string" minOccurs="0"/>
+<xs:element name="golonganDarah" type="xs:string" minOccurs="0"/>
+<xs:element name="idKelompok" type="xs:string" minOccurs="0"/>
+<xs:element name="jenis_kelamin" type="xs:string" minOccurs="0"/>
+<xs:element name="nama" type="xs:string" minOccurs="0"/>
+<xs:element name="nim" type="xs:string" minOccurs="0"/>
+<xs:element name="noHP" type="xs:string" minOccurs="0"/>
+<xs:element name="prodi" type="xs:string" minOccurs="0"/>
+<xs:element name="tanggalLahir" type="xs:string" minOccurs="0"/>
+<xs:element name="tinggiBadan" type="xs:string" minOccurs="0"/>
+<xs:element name="tingkatanPenyakit" type="xs:string" minOccurs="0"/>
+<xs:element name="totalSks" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDataMahasiswaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getListMahasiswa">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getListMahasiswaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:mahasiswa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="bacaInformasiKKN">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="bacaInformasiKKNResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createGroupKKN">
+<xs:sequence>
+<xs:element name="listMahasiswa" type="tns:mahasiswa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editDataMahasiswa">
+<xs:sequence>
+<xs:element name="mahasiswa" type="tns:mahasiswa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editDataMahasiswaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getListGroup">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getListGroupResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:kelompok" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDataGroup">
+<xs:sequence>
+<xs:element name="idKelompok" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDataMahasiswa">
+<xs:sequence>
+<xs:element name="nim" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editDataGroup">
+<xs:sequence>
+<xs:element name="group" type="tns:kelompok" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
