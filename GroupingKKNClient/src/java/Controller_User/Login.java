@@ -38,21 +38,32 @@ public class Login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String usernameTemp = username.substring(0, 2);
-        boolean cek = cekUser(username, password);
-        if (cek == true) {
-            HttpSession session = request.getSession();
-            session.setAttribute("username", username);
-            session.setMaxInactiveInterval(30);
-            if (usernameTemp.equals("P.")) {
+        HttpSession sessionLama = request.getSession(false);
+        String usernameLama = (String) sessionLama.getAttribute("username");
+        String usernameTempLama = usernameLama.substring(0, 2);
+        if (sessionLama == null) {
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            String usernameTemp = username.substring(0, 2);
+            boolean cek = cekUser(username, password);
+            if (cek == true) {
+                HttpSession session = request.getSession();
+                session.setAttribute("username", username);
+                session.setMaxInactiveInterval(30);
+                if (usernameTemp.equals("P.")) {
+                    response.sendRedirect("./HalamanUtama_Admin");
+                } else {
+                    response.sendRedirect("./HalamanUtama_Mahasiswa");
+                }
+            } else {
+                response.sendRedirect("./LoginGagal.html");
+            }
+        } else {
+            if (usernameTempLama.equals("P.")) {
                 response.sendRedirect("./HalamanUtama_Admin");
             } else {
                 response.sendRedirect("./HalamanUtama_Mahasiswa");
             }
-        } else {
-            response.sendRedirect("./LoginGagal.html");
         }
     }
 
