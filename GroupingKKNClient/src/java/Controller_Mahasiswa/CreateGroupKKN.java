@@ -83,11 +83,11 @@ public class CreateGroupKKN extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private void createGroupKKN(java.util.List<webservices.Mahasiswa> lishMahasiswa) {
+    private void createGroupKKN(java.util.List<webservices.Mahasiswa> listMahasiswa) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
         webservices.GroupingKKNWS port = service.getGroupingKKNWSPort();
-        port.createGroupKKN(lishMahasiswa);
+        port.createGroupKKN(listMahasiswa);
     }
 
     private java.util.List<webservices.Mahasiswa> getListMahasiswa() {

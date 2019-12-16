@@ -41,9 +41,9 @@ public class EditDataMahasiswa_Admin extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession(false);
-        String username = (String) session.getAttribute("username");
-        String usernameTemp = username.substring(0, 2);
         if (session != null) {
+            String username = (String) session.getAttribute("username");
+            String usernameTemp = username.substring(0, 2);
             if (usernameTemp.equals("P.")) {
                 ArrayList<Mahasiswa> listMahasiswa = (ArrayList<Mahasiswa>) getListMahasiswa();
                 try (PrintWriter out = response.getWriter()) {
@@ -139,7 +139,7 @@ public class EditDataMahasiswa_Admin extends HttpServlet {
                                 + "        <div class=\"modal-dialog modal-confirm\">\n"
                                 + "            <div class=\"modal-content\">\n"
                                 + "                <div class=\"modal-header\">\n"
-                                + "                    <h4 class=\"modal-title\">Are you sure edit");
+                                + "                    <h4 class=\"modal-title\">Are you sure to edit");
                         out.println(listMahasiswa.get(i).getNama() + "(" + listMahasiswa.get(i).getNim() + ")?</h4>	\n"
                                 + "                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n"
                                 + "                </div>\n"
@@ -148,9 +148,9 @@ public class EditDataMahasiswa_Admin extends HttpServlet {
                                 + "                </div>\n"
                                 + "                <div class=\"modal-footer\">\n"
                                 + "<form action=\"./FormEditDataMahasiswa_Admin\" method=\"post\">\n"
-                                + "                    <button type=\"button\" class=\"btn btn-info\" data-dismiss=\"modal\">Cancel</button>\n");
+                                + "                    <button type=\"button\" class=\"btn btn-info\" data-dismiss=\"modal\">No</button>\n");
                         out.println("                  <button name=\"edit\" value=");
-                        out.println("\"" + listMahasiswa.get(i).getNim() + "\" type=\"submit\" class=\"btn btn-danger\">Edit</button>\n");
+                        out.println("\"" + listMahasiswa.get(i).getNim() + "\" type=\"submit\" class=\"btn btn-danger\">Yes</button>\n");
                         out.println("</form>\n"
                                 + "                </div>\n"
                                 + "             </div>\n"

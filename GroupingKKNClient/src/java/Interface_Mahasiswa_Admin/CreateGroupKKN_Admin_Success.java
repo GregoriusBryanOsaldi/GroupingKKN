@@ -42,9 +42,9 @@ public class CreateGroupKKN_Admin_Success extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession(false);
-        String username = (String) session.getAttribute("username");
-        String usernameTemp = username.substring(0, 2);
         if (session != null) {
+            String username = (String) session.getAttribute("username");
+            String usernameTemp = username.substring(0, 2);
             if (usernameTemp.equals("P.")) {
                 ArrayList<Mahasiswa> listMahasiswa = (ArrayList<Mahasiswa>) getListMahasiswa();
                 try (PrintWriter out = response.getWriter()) {
