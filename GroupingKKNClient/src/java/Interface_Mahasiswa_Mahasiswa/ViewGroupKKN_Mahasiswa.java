@@ -87,7 +87,7 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                             + "                <strong>________</strong>\n"
                             + "            </h1>\n"
                             + "            <ul class=\"sidebar-nav\" style=\"color: rgb(255,255,255);padding: -36px;margin-top: 252px;width: 250px;height: 300px;\">\n"
-                            + "                <li> <a href=\"./HalamanUtama_Admin\" style=\"font-size: 16px;margin-top: 6px;\">Home </a>\n"
+                            + "                <li> <a href=\"./HalamanUtama_Mahasiswa\" style=\"font-size: 16px;margin-top: 6px;\">Home </a>\n"
                             + "                </li>\n"
                             + "                <li class=\"text-center\" style=\"font-size: 16px;\"><strong>Manage Data Mahasiswa</strong>\n"
                             + "                </li>\n"
