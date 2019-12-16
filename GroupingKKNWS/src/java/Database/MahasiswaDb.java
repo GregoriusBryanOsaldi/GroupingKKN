@@ -289,7 +289,6 @@ public class MahasiswaDb {
             mahasiswaTemp.add(filsafatL.get(i));
         }
 
-        
         ArrayList<Mahasiswa> akutansiP = new ArrayList<Mahasiswa>();
         ArrayList<Mahasiswa> ekonomiP = new ArrayList<Mahasiswa>();
         ArrayList<Mahasiswa> manajemenP = new ArrayList<Mahasiswa>();
@@ -315,8 +314,7 @@ public class MahasiswaDb {
         ArrayList<Mahasiswa> sasingP = new ArrayList<Mahasiswa>();
         ArrayList<Mahasiswa> sejarahP = new ArrayList<Mahasiswa>();
         ArrayList<Mahasiswa> filsafatP = new ArrayList<Mahasiswa>();
-        
-        
+
         for (int i = 0; i < perempuan.size(); i++) {
             if (perempuan.get(i).getProdi().equals("Akutansi")) {
                 akutansiP.add(perempuan.get(i));
@@ -370,7 +368,7 @@ public class MahasiswaDb {
                 filsafatP.add(perempuan.get(i));
             }
         }
-        
+
         for (int i = 0; i < akutansiP.size(); i++) {
             mahasiswaTemp.add(akutansiP.get(i));
         }
@@ -487,8 +485,7 @@ public class MahasiswaDb {
         //Pembagian Kelompok
         KelompokDb kelompok = new KelompokDb();
         ArrayList<Kelompok> klp = kelompok.getListGroup();
-       
-        
+
         ArrayList<Kelompok> kelompokTingkat1 = new ArrayList<Kelompok>();
         ArrayList<Kelompok> kelompokTingkat2 = new ArrayList<Kelompok>();
         ArrayList<Kelompok> kelompokTingkat3 = new ArrayList<Kelompok>();
@@ -581,15 +578,9 @@ public class MahasiswaDb {
                 String alamat = rs.getString("alamat_mhs");
                 String noHp = rs.getString("no_hp_mhs");
                 String idKelompok = rs.getString("id_kelompok");
-                Mahasiswa mhs;
-                if (rs.wasNull()) {
-                    idKelompok = "-";
-                    mhs = new Mahasiswa(nim, nama, jenisKelamin, tanggallahir, prodi, fakultas, agama, fakultas,
-                            email, tanggallahir, golonganDarah, tanggallahir, alamat, alamat, noHp, idKelompok);
-                } else {
-                    mhs = new Mahasiswa(nim, nama, jenisKelamin, tanggallahir, prodi, fakultas, agama, totalSks,
-                            email, tingkatanPenyakit, golonganDarah, tinggiBadan, beratBadan, alamat, noHp, idKelompok);
-                }
+
+                Mahasiswa mhs = new Mahasiswa(nim, nama, jenisKelamin, tanggallahir, prodi, fakultas, agama,
+                        totalSks, email, tingkatanPenyakit, golonganDarah, tinggiBadan, beratBadan, alamat, noHp, idKelompok);
                 listMahasiswa.add(mhs);
             }
         } catch (SQLException ex) {
