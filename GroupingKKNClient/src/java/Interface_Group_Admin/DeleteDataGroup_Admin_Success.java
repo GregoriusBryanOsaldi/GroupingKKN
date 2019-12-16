@@ -76,7 +76,7 @@ public class DeleteDataGroup_Admin_Success extends HttpServlet {
                             + "        <link rel=\"stylesheet\" href=\"assets/css/PopupConfirm.css\">\n"
                             + "    </head>\n"
                             + "    <body>\n"
-                            + "        <div class=\"alert alert-warning beautiful\" role=\"alert\"><strong>Success!</strong> Data successfully deleted.</div>"
+                            + "        <div class=\"alert alert-warning beautiful\" role=\"alert\"><strong>Success!</strong> Group successfully deleted.</div>"
                             + "        <div>\n"
                             + "            <div class=\"text-left\" id=\"sidebar-wrapper\" style=\"height: 100%;margin: 0px;padding: 0px;margin-left: -250px;margin-top: -30px;\">\n"
                             + "                <a href=\"./HalamanUtama_Admin\"><img src=\"assets/img/logousd.png\" style=\"width: 130px;height: 130px;margin-top: 25px;margin-left: 55px;\"></a>\n"

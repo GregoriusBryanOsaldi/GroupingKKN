@@ -506,6 +506,7 @@ pre code {
 .pre-scrollable {
     max-height: 340px;
     overflow-y: scroll;
+    overflow-x: scroll;
 }
 
 .container {
@@ -5046,7 +5047,6 @@ a.badge-dark.focus,a.badge-dark:focus {
 
 .alert {
     position: relative;
-    z-index: 1000;
     padding: .75rem 1.25rem;
     margin-bottom: 1rem;
     border: 1px solid transparent;

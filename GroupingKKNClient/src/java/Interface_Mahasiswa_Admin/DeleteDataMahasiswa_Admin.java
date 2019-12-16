@@ -120,7 +120,7 @@ public class DeleteDataMahasiswa_Admin extends HttpServlet {
                             + "                        <thead>\n"
                             + "                            <tr>\n"
                             + "                                <th style=\"width: 200px\">NIM</th>\n"
-                            + "                                <th style=\"width: 900px\">Nama</th>\n"
+                            + "                                <th style=\"width: 700px\">Nama</th>\n"
                             + "                                <th>Action</th>\n"
                             + "                            </tr>\n"
                             + "                        </thead>\n"
