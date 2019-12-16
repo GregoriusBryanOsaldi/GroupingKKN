@@ -4,9 +4,6 @@
 <xsd:import namespace="http://WebServices/" schemaLocation="http://localhost:8080/GroupingKKNWS/GroupingKKNWS?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="addUser">
-<part name="parameters" element="tns:addUser"/>
-</message>
 <message name="deleteDataMahasiswa">
 <part name="parameters" element="tns:deleteDataMahasiswa"/>
 </message>
@@ -19,32 +16,32 @@
 <message name="simpanInformasiKKN">
 <part name="parameters" element="tns:simpanInformasiKKN"/>
 </message>
-<message name="cekUser">
-<part name="parameters" element="tns:cekUser"/>
-</message>
-<message name="cekUserResponse">
-<part name="parameters" element="tns:cekUserResponse"/>
-</message>
-<message name="getListGroup">
-<part name="parameters" element="tns:getListGroup"/>
-</message>
-<message name="getListGroupResponse">
-<part name="parameters" element="tns:getListGroupResponse"/>
-</message>
-<message name="createGroupKKN">
-<part name="parameters" element="tns:createGroupKKN"/>
-</message>
 <message name="addDataMahasiswa">
 <part name="parameters" element="tns:addDataMahasiswa"/>
 </message>
 <message name="addDataMahasiswaResponse">
 <part name="parameters" element="tns:addDataMahasiswaResponse"/>
 </message>
+<message name="cekUser">
+<part name="parameters" element="tns:cekUser"/>
+</message>
+<message name="cekUserResponse">
+<part name="parameters" element="tns:cekUserResponse"/>
+</message>
+<message name="createGroupKKN">
+<part name="parameters" element="tns:createGroupKKN"/>
+</message>
 <message name="getListMahasiswa">
 <part name="parameters" element="tns:getListMahasiswa"/>
 </message>
 <message name="getListMahasiswaResponse">
 <part name="parameters" element="tns:getListMahasiswaResponse"/>
+</message>
+<message name="getListGroup">
+<part name="parameters" element="tns:getListGroup"/>
+</message>
+<message name="getListGroupResponse">
+<part name="parameters" element="tns:getListGroupResponse"/>
 </message>
 <message name="addDataGroup">
 <part name="parameters" element="tns:addDataGroup"/>
@@ -61,10 +58,10 @@
 <message name="bacaInformasiKKNResponse">
 <part name="parameters" element="tns:bacaInformasiKKNResponse"/>
 </message>
+<message name="addUser">
+<part name="parameters" element="tns:addUser"/>
+</message>
 <portType name="GroupingKKNWS">
-<operation name="addUser">
-<input wsam:Action="http://WebServices/GroupingKKNWS/addUser" message="tns:addUser"/>
-</operation>
 <operation name="deleteDataMahasiswa">
 <input wsam:Action="http://WebServices/GroupingKKNWS/deleteDataMahasiswa" message="tns:deleteDataMahasiswa"/>
 </operation>
@@ -75,24 +72,24 @@
 <operation name="simpanInformasiKKN">
 <input wsam:Action="http://WebServices/GroupingKKNWS/simpanInformasiKKN" message="tns:simpanInformasiKKN"/>
 </operation>
-<operation name="cekUser">
-<input wsam:Action="http://WebServices/GroupingKKNWS/cekUserRequest" message="tns:cekUser"/>
-<output wsam:Action="http://WebServices/GroupingKKNWS/cekUserResponse" message="tns:cekUserResponse"/>
-</operation>
-<operation name="getListGroup">
-<input wsam:Action="http://WebServices/GroupingKKNWS/getListGroupRequest" message="tns:getListGroup"/>
-<output wsam:Action="http://WebServices/GroupingKKNWS/getListGroupResponse" message="tns:getListGroupResponse"/>
-</operation>
-<operation name="createGroupKKN">
-<input wsam:Action="http://WebServices/GroupingKKNWS/createGroupKKN" message="tns:createGroupKKN"/>
-</operation>
 <operation name="addDataMahasiswa">
 <input wsam:Action="http://WebServices/GroupingKKNWS/addDataMahasiswaRequest" message="tns:addDataMahasiswa"/>
 <output wsam:Action="http://WebServices/GroupingKKNWS/addDataMahasiswaResponse" message="tns:addDataMahasiswaResponse"/>
 </operation>
+<operation name="cekUser">
+<input wsam:Action="http://WebServices/GroupingKKNWS/cekUserRequest" message="tns:cekUser"/>
+<output wsam:Action="http://WebServices/GroupingKKNWS/cekUserResponse" message="tns:cekUserResponse"/>
+</operation>
+<operation name="createGroupKKN">
+<input wsam:Action="http://WebServices/GroupingKKNWS/createGroupKKN" message="tns:createGroupKKN"/>
+</operation>
 <operation name="getListMahasiswa">
 <input wsam:Action="http://WebServices/GroupingKKNWS/getListMahasiswaRequest" message="tns:getListMahasiswa"/>
 <output wsam:Action="http://WebServices/GroupingKKNWS/getListMahasiswaResponse" message="tns:getListMahasiswaResponse"/>
+</operation>
+<operation name="getListGroup">
+<input wsam:Action="http://WebServices/GroupingKKNWS/getListGroupRequest" message="tns:getListGroup"/>
+<output wsam:Action="http://WebServices/GroupingKKNWS/getListGroupResponse" message="tns:getListGroupResponse"/>
 </operation>
 <operation name="addDataGroup">
 <input wsam:Action="http://WebServices/GroupingKKNWS/addDataGroup" message="tns:addDataGroup"/>
@@ -107,15 +104,12 @@
 <input wsam:Action="http://WebServices/GroupingKKNWS/bacaInformasiKKNRequest" message="tns:bacaInformasiKKN"/>
 <output wsam:Action="http://WebServices/GroupingKKNWS/bacaInformasiKKNResponse" message="tns:bacaInformasiKKNResponse"/>
 </operation>
+<operation name="addUser">
+<input wsam:Action="http://WebServices/GroupingKKNWS/addUser" message="tns:addUser"/>
+</operation>
 </portType>
 <binding name="GroupingKKNWSPortBinding" type="tns:GroupingKKNWS">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="addUser">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-</operation>
 <operation name="deleteDataMahasiswa">
 <soap:operation soapAction=""/>
 <input>
@@ -137,7 +131,7 @@
 <soap:body use="literal"/>
 </input>
 </operation>
-<operation name="cekUser">
+<operation name="addDataMahasiswa">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -146,7 +140,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getListGroup">
+<operation name="cekUser">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -161,7 +155,7 @@
 <soap:body use="literal"/>
 </input>
 </operation>
-<operation name="addDataMahasiswa">
+<operation name="getListMahasiswa">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -170,7 +164,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getListMahasiswa">
+<operation name="getListGroup">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -205,6 +199,12 @@
 <output>
 <soap:body use="literal"/>
 </output>
+</operation>
+<operation name="addUser">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
 </operation>
 </binding>
 <service name="GroupingKKNWS">
