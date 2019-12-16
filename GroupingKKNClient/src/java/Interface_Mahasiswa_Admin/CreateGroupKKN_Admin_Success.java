@@ -77,7 +77,7 @@ public class CreateGroupKKN_Admin_Success extends HttpServlet {
                             + "</head>\n"
                             + "\n"
                             + "<body>\n"
-                            + "    <div class=\"alert alert-warning beautiful\" role=\"alert\"><strong>Success!</strong> Group successfully created.</div>\n"
+                            + "    <div class=\"alert alert-warning beautiful\" role=\"alert\"><strong>Success!</strong> The group has been created.</div>\n"
                             + "    <div>\n"
                             + "       <div class=\"text-left\" id=\"sidebar-wrapper\" style=\"height: 100%;margin: 0px;padding: 0px;margin-left: -250px;margin-top: -30px;\">\n"
                             + "                <a href=\"./HalamanUtama_Admin\"><img src=\"assets/img/logousd.png\" style=\"width: 130px;height: 130px;margin-top: 25px;margin-left: 55px;\"></a>\n"
