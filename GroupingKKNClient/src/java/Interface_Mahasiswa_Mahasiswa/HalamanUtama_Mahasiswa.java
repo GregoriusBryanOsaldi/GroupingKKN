@@ -97,7 +97,7 @@ public class HalamanUtama_Mahasiswa extends HttpServlet {
                             + "                </ul>\n"
                             + "            </div>\n"
                             + "            <h1 class=\"text-right\" style=\"font-size: 20px;margin-top: 30px;margin-bottom: 20px;margin-right: 30px;filter: brightness(100%);\">\n"
-                            + "                <span style=\"text-decoration: underline;\">Admin Page</span></h1>\n"
+                            + "                <span style=\"text-decoration: underline;\">Mahasiswa Page</span></h1>\n"
                             + "            <a href=\"./Logout\" style=\"position: absolute;right: 30px;top: 60px;\">Logout</a>\n"
                             + "        </div>");
                     out.println("<div>\n"
