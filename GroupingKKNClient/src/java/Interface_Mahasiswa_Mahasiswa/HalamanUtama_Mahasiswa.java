@@ -75,7 +75,7 @@ public class HalamanUtama_Mahasiswa extends HttpServlet {
                 out.println("</head>");
                 out.println("<body>");
                 out.println("<div>\n"
-                        + "            <div class=\"text-left\" id=\"sidebar-wrapper\" style=\"height: 800px;margin: 0px;padding: 0px;margin-left: -250px;margin-top: -30px;\">\n"
+                        + "            <div class=\"text-left\" id=\"sidebar-wrapper\" style=\"height: 100%;margin: 0px;padding: 0px;margin-left: -250px;margin-top: -30px;\">\n"
                         + "                <a href=\"./HalamanUtama_Admin.html\"><img src=\"assets/img/logousd.png\" style=\"width: 130px;height: 130px;margin-top: 25px;margin-left: 55px;\"></a>\n"
                         + "                <h1 class=\"text-center\" style=\"color: rgb(255,255,255);font-size: 20px;margin-top: 20px;\">\n"
                         + "                    <strong>SISTEM PEMBAGIAN KELOMPOK KKN</strong>\n"
@@ -97,7 +97,7 @@ public class HalamanUtama_Mahasiswa extends HttpServlet {
                         + "            </div>\n"
                         + "            <h1 class=\"text-right\" style=\"font-size: 20px;margin-top: 30px;margin-bottom: 20px;margin-right: 30px;filter: brightness(100%);\">\n"
                         + "                <span style=\"text-decoration: underline;\">Admin Page</span></h1>\n"
-                        + "            <a class=\"text-center\" href=\"./Logout\" style=\"margin-left: 1503px;padding: 0px;padding-top: 0px;padding-right: 0px;\">Logout</a>\n"
+                        + "            <a href=\"./Logout\" style=\"position: absolute;right: 30px;top: 60px;\">Logout</a>\n"
                         + "        </div>");
                 out.println("<div>\n"
                         + "            <h1 class=\"text-right\" style=\"width: 538px;font-size: 30px;\"><strong>INFORMASI KKN</strong></h1>\n"
