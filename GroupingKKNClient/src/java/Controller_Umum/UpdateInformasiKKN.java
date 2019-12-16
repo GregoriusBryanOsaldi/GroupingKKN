@@ -39,6 +39,7 @@ public class UpdateInformasiKKN extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String informasi = request.getParameter("informasi");
         simpanInformasiKKN(informasi);
+        response.sendRedirect("./HalamanUtama_Admin_Success.html");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
