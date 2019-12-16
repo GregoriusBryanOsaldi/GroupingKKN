@@ -12,6 +12,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.xml.ws.WebServiceRef;
 import webservices.GroupingKKNWS_Service;
 
@@ -42,10 +43,9 @@ public class Login extends HttpServlet {
         String usernameTemp = username.substring(0, 2);
         boolean cek = cekUser(username, password);
         if (cek == true) {
-            Cookie loginCookie = new Cookie("username", username);
+            HttpSession session = request.getSession();
             //setting session to expiry in 30 mins            
-            loginCookie.setMaxAge(30 * 60);
-            response.addCookie(loginCookie);
+            session.setAttribute("username", username);
             if (usernameTemp.equals("P.")) {
                 response.sendRedirect("./HalamanUtama_Admin");
             } else {

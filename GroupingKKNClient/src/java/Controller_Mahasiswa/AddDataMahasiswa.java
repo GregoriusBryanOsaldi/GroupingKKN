@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.xml.ws.WebServiceRef;
 import webservices.GroupingKKNWS_Service;
 import webservices.Mahasiswa;
@@ -41,6 +42,9 @@ public class AddDataMahasiswa extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        HttpSession session = request.getSession(false);
+        String username = (String) session.getAttribute("username");
+        String usernameTemp = username.substring(0, 2);
 
         String nim = request.getParameter("nim");
         String nama = request.getParameter("nama");
@@ -80,7 +84,11 @@ public class AddDataMahasiswa extends HttpServlet {
         mhs.setNoHP(noHP);
 
         addDataMahasiswa(mhs);
-        response.sendRedirect("./AddDataMahasiswa_Admin_Success.html");
+        if (usernameTemp.equals("P.")) {
+            response.sendRedirect("./AddDataMahasiswa_Admin_Success.html");
+        } else {
+            response.sendRedirect("./AddDataMahasiswa_Mahasiswa_Success.html");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
