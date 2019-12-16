@@ -181,14 +181,14 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                         + "                </li>\n"
                         + "                <li> <a href=\"./DeleteDataGroup_Admin\">Delete Data Group</a>\n"
                         + "                </li>\n"
-                        + "                <li> <a href=\"./EditDataGroup_Admin.html\">Edit Data Group</a>\n"
+                        + "                <li> <a href=\"./EditDataGroup_Admin\">Edit Data Group</a>\n"
                         + "                </li>\n"
                         + "                <li> <a href=\"./ViewDataGroup_Admin\">View Data Group</a>\n"
                         + "                </li>\n"
                         + "        </div>\n"
                         + "        <h1 class=\"text-right\" style=\"font-size: 20px;margin-top: 30px;margin-bottom: 20px;margin-right: 30px;filter: brightness(100%);\">\n"
                         + "            <span style=\"text-decoration: underline;\">Admin Page</span></h1>\n"
-                        + "        <a class=\"text-center\" href=\"#\" style=\"margin-left: 1503px;padding: 0px;padding-top: 0px;padding-right: 0px;\">Logout</a>");
+                        + "        <a class=\"text-center\" href=\"./Logout\" style=\"margin-left: 1503px;padding: 0px;padding-top: 0px;padding-right: 0px;\">Logout</a>");
                 out.println(" <h1 class=\"text-center\" style=\"margin-top: 20px;padding-right: 0px;font-size: 20px;margin-bottom: 0px;padding-left: 215px;\">VIEW GROUP KKN</h1>\n");
                 out.println(" <div class=\"table-responsive\" style=\"margin-left: 274px;margin-top: 30px;\">\n");
                 out.println(" <table border=\"1\" id=\"tableGroupKKN\" class=\"table\" style=\"width: 1200px\">");

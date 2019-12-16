@@ -121,7 +121,7 @@ public class FormEditDataGroup_Admin extends HttpServlet {
                     + "            </div>\n"
                     + "            <h1 class=\"text-right\" style=\"font-size: 20px;margin-top: 30px;margin-bottom: 20px;margin-right: 30px;filter: brightness(100%);\">\n"
                     + "                <span style=\"text-decoration: underline;\">Admin Page</span></h1>\n"
-                    + "            <a class=\"text-center\" href=\"#\" style=\"margin-left: 1503px;padding: 0px;padding-top: 0px;padding-right: 0px;margin-top: 0px;\">Logout</a>\n"
+                    + "            <a class=\"text-center\" href=\"./Logout\" style=\"margin-left: 1503px;padding: 0px;padding-top: 0px;padding-right: 0px;margin-top: 0px;\">Logout</a>\n"
                     + "        </div>\n"
                     + "            <form action=\"./EditDataGroup\" method=\"post\">\n"
                     + "                <div class=\"table-responsive\" style=\"margin-left: 274px;margin-top: 30px;\">\n"

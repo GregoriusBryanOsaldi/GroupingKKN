@@ -94,7 +94,7 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                         + "        </div>\n"
                         + "        <h1 class=\"text-right\" style=\"font-size: 20px;margin-top: 30px;margin-bottom: 20px;margin-right: 30px;filter: brightness(100%);\">\n"
                         + "            <span style=\"text-decoration: underline;\">Admin Page</span></h1>\n"
-                        + "        <a class=\"text-center\" href=\"#\" style=\"margin-left: 1503px;padding: 0px;padding-top: 0px;padding-right: 0px;\">Logout</a>");
+                        + "        <a class=\"text-center\" href=\"./Logout\" style=\"margin-left: 1503px;padding: 0px;padding-top: 0px;padding-right: 0px;\">Logout</a>");
                 out.println("<h1 class=\"text-center\" style=\"margin-top: 20px;padding-right: 0px;font-size: 20px;margin-bottom: 0px;padding-left: 215px;\">VIEW GROUP KKN</h1>\n");
                 out.println("<label style=\"margin-left: 300px; margin-top: 50px;font-size: 20px;\"><b>The groups has not been created yet</b></label>");
                 out.println("<script src=\"assets/js/jquery.min.js\"></script>\n"

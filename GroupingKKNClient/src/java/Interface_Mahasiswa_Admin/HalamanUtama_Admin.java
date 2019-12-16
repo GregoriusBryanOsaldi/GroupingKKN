@@ -106,7 +106,7 @@ public class HalamanUtama_Admin extends HttpServlet {
                     + "            </div>\n"
                     + "            <h1 class=\"text-right\" style=\"font-size: 20px;margin-top: 30px;margin-bottom: 20px;margin-right: 30px;filter: brightness(100%);\">\n"
                     + "                <span style=\"text-decoration: underline;\">Admin Page</span></h1>\n"
-                    + "            <a class=\"text-center\" href=\"#\" style=\"margin-left: 1503px;padding: 0px;padding-top: 0px;padding-right: 0px;\">Logout</a>\n"
+                    + "            <a class=\"text-center\" href=\"./Logout\" style=\"margin-left: 1503px;padding: 0px;padding-top: 0px;padding-right: 0px;\">Logout</a>\n"
                     + "        </div>");
             out.println("<div>\n"
                     + "            <h1 class=\"text-right\" style=\"width: 538px;font-size: 30px;\"><strong>INFORMASI KKN</strong></h1>\n"
