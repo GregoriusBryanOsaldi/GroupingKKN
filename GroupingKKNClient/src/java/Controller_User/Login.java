@@ -39,8 +39,6 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession sessionLama = request.getSession(false);
-        String usernameLama = (String) sessionLama.getAttribute("username");
-        String usernameTempLama = usernameLama.substring(0, 2);
         if (sessionLama == null) {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
@@ -59,6 +57,8 @@ public class Login extends HttpServlet {
                 response.sendRedirect("./LoginGagal.html");
             }
         } else {
+            String usernameLama = (String) sessionLama.getAttribute("username");
+            String usernameTempLama = usernameLama.substring(0, 2);
             if (usernameTempLama.equals("P.")) {
                 response.sendRedirect("./HalamanUtama_Admin");
             } else {
