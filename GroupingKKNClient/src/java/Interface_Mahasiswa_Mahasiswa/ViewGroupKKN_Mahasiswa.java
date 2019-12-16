@@ -143,8 +143,8 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                                 + "</head>\n"
                                 + "\n"
                                 + "<body>\n");
-                        out.println("<div class=\"text-left\" id=\"sidebar-wrapper\" style=\"height: 800px;margin: 0px;padding: 0px;margin-left: -250px;margin-top: -30px;\">\n"
-                                + "            <a href=\"./HalamanUtama_Admin\"><img src=\"assets/img/logousd.png\" style=\"width: 130px;height: 130px;margin-top: 25px;margin-left: 55px;\"></a>\n"
+                        out.println("<div class=\"text-left\" id=\"sidebar-wrapper\" style=\"height: 100%;margin: 0px;padding: 0px;margin-left: -250px;margin-top: -30px;\">\n"
+                                + "            <a href=\"./HalamanUtama_Mahasiswa\"><img src=\"assets/img/logousd.png\" style=\"width: 130px;height: 130px;margin-top: 25px;margin-left: 55px;\"></a>\n"
                                 + "            <h1 class=\"text-center\" style=\"color: rgb(255,255,255);font-size: 20px;margin-top: 20px;\">\n"
                                 + "                <strong>SISTEM PEMBAGIAN KELOMPOK KKN</strong>\n"
                                 + "            </h1>\n"
@@ -152,7 +152,7 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                                 + "                <strong>________</strong>\n"
                                 + "            </h1>\n"
                                 + "            <ul class=\"sidebar-nav\" style=\"color: rgb(255,255,255);padding: -36px;margin-top: 252px;width: 250px;height: 300px;\">\n"
-                                + "                <li> <a href=\"./HalamanUtama_Admin\" style=\"font-size: 16px;margin-top: 6px;\">Home </a>\n"
+                                + "                <li> <a href=\"./HalamanUtama_Mahasiswa\" style=\"font-size: 16px;margin-top: 6px;\">Home </a>\n"
                                 + "                </li>\n"
                                 + "                <li class=\"text-center\" style=\"font-size: 16px;\"><strong>Manage Data Mahasiswa</strong>\n"
                                 + "                </li>\n"
@@ -164,7 +164,7 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                                 + "        </div>\n"
                                 + "        <h1 class=\"text-right\" style=\"font-size: 20px;margin-top: 30px;margin-bottom: 20px;margin-right: 30px;filter: brightness(100%);\">\n"
                                 + "            <span style=\"text-decoration: underline;\">Mahasiswa Page</span></h1>\n"
-                                + "        <a class=\"text-center\" href=\"./Logout\" style=\"margin-left: 1503px;padding: 0px;padding-top: 0px;padding-right: 0px;\">Logout</a>");
+                                + "        <a href=\"./Logout\" style=\"position: absolute;right: 30px;top: 60px;\">Logout</a>\n");
                         out.println(" <h1 class=\"text-center\" style=\"margin-top: 20px;padding-right: 0px;font-size: 20px;margin-bottom: 0px;padding-left: 215px;\">VIEW GROUP KKN</h1>\n");
                         out.println(" <div class=\"table-responsive\" style=\"margin-left: 274px;margin-top: 30px;\">\n");
                         out.println(" <table border=\"1\" id=\"tableGroupKKN\" class=\"table\" style=\"width: 1200px\">");
