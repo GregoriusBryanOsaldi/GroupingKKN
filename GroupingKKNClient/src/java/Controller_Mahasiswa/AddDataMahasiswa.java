@@ -53,7 +53,7 @@ public class AddDataMahasiswa extends HttpServlet {
         String tahun = tanggalLahir.substring(0, 4);
         String bulan = tanggalLahir.substring(5, 7);
         String tanggal = tanggalLahir.substring(8, 10);
-        String tanggalLahirFix = tanggal + "-" + bulan + "-" + tahun;
+        String tanggalLahirFix = tanggal + "/" + bulan + "/" + tahun;
         String prodi = request.getParameter("prodi");
         String fakultas = request.getParameter("fakultas");
         String agama = request.getParameter("agama");
