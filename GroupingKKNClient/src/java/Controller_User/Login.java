@@ -47,7 +47,8 @@ public class Login extends HttpServlet {
             if (cek == true) {
                 HttpSession session = request.getSession();
                 session.setAttribute("username", username);
-                session.setMaxInactiveInterval(30);
+                // time max session 30 menit
+                session.setMaxInactiveInterval(30*60);
                 if (usernameTemp.equals("P.")) {
                     response.sendRedirect("./HalamanUtama_Admin");
                 } else {

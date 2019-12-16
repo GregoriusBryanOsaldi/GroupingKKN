@@ -82,7 +82,7 @@ public class ViewDataGroup_Admin extends HttpServlet {
                                 + "            <h1 class=\"text-center\" style=\"color: rgb(255,255,255);font-size: 20px;margin-top: 20px;\"><strong>SISTEM PEMBAGIAN KELOMPOK KKN</strong></h1>\n"
                                 + "            <h1 class=\"text-center\" style=\"color: rgb(255,255,255);font-size: 60px;margin-top: -55px;line-height: 72px;\"><strong>________</strong></h1>\n"
                                 + "            <ul class=\"sidebar-nav\" style=\"color: rgb(255,255,255);padding: -36px;margin-top: 252px;width: 250px;height: 300px;\">\n"
-                                + "                <li class=\"sidebar-brand\"> <a href=\"./HalamanUtama_Admin.html\" style=\"font-size: 16px;margin-top: 6px;\">Home </a></li>\n"
+                                + "                <li class=\"sidebar-brand\"> <a href=\"./HalamanUtama_Admin\" style=\"font-size: 16px;margin-top: 6px;\">Home </a></li>\n"
                                 + "                <li class=\"text-center\" style=\"font-size: 16px;\"><strong>Manage Data Mahasiswa</strong>\n"
                                 + "                    </li>\n"
                                 + "                    <li> <a href=\"./AddDataMahasiswa_Admin.html\">Add Data Mahasiswa</a>\n"
