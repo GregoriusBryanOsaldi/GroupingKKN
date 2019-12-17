@@ -121,18 +121,23 @@ public class EditDataMahasiswa_Admin_Success extends HttpServlet {
                             + "                <div class=\"table-responsive\" style=\"margin-left: 274px;margin-top: 30px;\">\n"
                             + "                    <table class=\"table\">\n"
                             + "                        <thead>\n"
-                            + "                            <tr>\n"
-                            + "                                <th style=\"width: 200px\">NIM</th>\n"
-                            + "                                <th style=\"width: 700px\">Nama</th>\n"
-                            + "                                <th>Action</th>\n"
-                            + "                            </tr>\n"
+                            + "                    <tr>\n"
+                            + "                        <th>NIM</th>\n"
+                            + "                        <th>Nama</th>\n"
+                            + "                        <th>Jenis Kelamin</th>\n"
+                            + "                        <th>Prodi</th>\n"
+                            + "                        <th>Tingkatan Penyakit</th>\n"
+                            + "                        <th>Action</th>\n"
+                            + "                    </tr>\n"
                             + "                        </thead>\n"
                             + "                        <tbody>");
                     for (int i = 0; i < listMahasiswa.size(); i++) {
-                        out.println("<tr><td>");
-                        out.println(listMahasiswa.get(i).getNim() + "</td>\n");
-                        out.println("<td>");
-                        out.println(listMahasiswa.get(i).getNama() + "</td>\n");
+                        out.println("<tr>");
+                        out.println("<td>" + listMahasiswa.get(i).getNim() + "</td>\n"
+                                + "<td>" + listMahasiswa.get(i).getNama() + "</td>"
+                                + "<td>" + listMahasiswa.get(i).getJenisKelamin() + "</td>"
+                                + "<td>" + listMahasiswa.get(i).getProdi() + "</td>"
+                                + "<td>" + listMahasiswa.get(i).getTingkatanPenyakit() + "</td>");
                         out.println("<td><button class=\"btn btn-primary\" name=\"delete\" value=");
                         out.println("\"" + listMahasiswa.get(i).getNim() + "\"data-toggle=\"modal\" data-target=\"#myModal" + i + "\">Edit</button></td>");
                         out.println("</tr>");

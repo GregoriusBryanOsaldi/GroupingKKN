@@ -123,15 +123,21 @@ public class CreateGroupKKN_Admin extends HttpServlet {
                             + "            <table class=\"table\">"
                             + "<thead>\n"
                             + "                    <tr>\n"
-                            + "                        <th style=\"width: 200px\">NIM</th>\n"
-                            + "                        <th style=\"width: 850px\">Nama</th>\n"
+                            + "                        <th>NIM</th>\n"
+                            + "                        <th>Nama</th>\n"
+                            + "                        <th>Jenis Kelamin</th>\n"
+                            + "                        <th>Prodi</th>\n"
+                            + "                        <th>Tingkatan Penyakit</th>\n"
                             + "                    </tr>\n"
                             + "                </thead>");
                     out.println("<tbody>\n");
                     for (int j = 0; j < listMahasiswa.size(); j++) {
                         out.println("<tr>");
                         out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
-                                + "<td>" + listMahasiswa.get(j).getNama() + "</td>");
+                                + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
+                                + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
+                                + "<td>" + listMahasiswa.get(j).getProdi() + "</td>"
+                                + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>");
                         out.println("                    </tr>");
                     }
                     out.println("</tbody>\n"
@@ -194,13 +200,6 @@ public class CreateGroupKKN_Admin extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-    private java.util.List<webservices.Kelompok> getListKelompok() {
-        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
-        // If the calling of port operations may lead to race condition some synchronization is required.
-        webservices.GroupingKKNWS port = service.getGroupingKKNWSPort();
-        return port.getListGroup();
-    }
 
     private java.util.List<webservices.Mahasiswa> getListMahasiswa() {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
