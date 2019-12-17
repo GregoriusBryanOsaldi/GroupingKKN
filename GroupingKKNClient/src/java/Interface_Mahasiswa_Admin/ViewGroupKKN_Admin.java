@@ -159,7 +159,7 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                                 + "\n"
                                 + "<body>\n");
                         out.println("<div class=\"text-left\" id=\"sidebar-wrapper\" style=\"height: 100%;margin: 0px;padding: 0px;margin-left: -250px;margin-top: -30px;\">\n"
-                                + "            <a href=\"./HalamanUtama_Admin.html\"><img src=\"assets/img/logousd.png\" style=\"width: 130px;height: 130px;margin-top: 25px;margin-left: 55px;\"></a>\n"
+                                + "            <a href=\"./HalamanUtama_Admin\"><img src=\"assets/img/logousd.png\" style=\"width: 130px;height: 130px;margin-top: 25px;margin-left: 55px;\"></a>\n"
                                 + "            <h1 class=\"text-center\" style=\"color: rgb(255,255,255);font-size: 20px;margin-top: 20px;\">\n"
                                 + "                <strong>SISTEM PEMBAGIAN KELOMPOK KKN</strong>\n"
                                 + "            </h1>\n"
@@ -167,7 +167,7 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                                 + "                <strong>________</strong>\n"
                                 + "            </h1>\n"
                                 + "            <ul class=\"sidebar-nav\" style=\"color: rgb(255,255,255);padding: -36px;margin-top: 252px;width: 250px;height: 300px;\">\n"
-                                + "                <li> <a href=\"./HalamanUtama_Admin.html\" style=\"font-size: 16px;margin-top: 6px;\">Home </a>\n"
+                                + "                <li> <a href=\"./HalamanUtama_Admin\" style=\"font-size: 16px;margin-top: 6px;\">Home </a>\n"
                                 + "                </li>\n"
                                 + "                <li class=\"text-center\" style=\"font-size: 16px;\"><strong>Manage Data Mahasiswa</strong>\n"
                                 + "                </li>\n"
