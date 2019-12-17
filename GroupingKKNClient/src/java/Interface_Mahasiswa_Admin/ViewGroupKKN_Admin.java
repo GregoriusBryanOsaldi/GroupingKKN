@@ -212,7 +212,7 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                                     + "                    </tr>\n"
                                     + "                </thead>");
                             out.println("<tbody>\n");
-                            int no = 0;
+                            int no = 1;
                             for (int j = 0; j < listMahasiswa.size(); j++) {
                                 if (listMahasiswa.get(j).getIdKelompok().equals(listKelompok.get(i).getIdKelompok())) {
                                     out.println("<tr>");
