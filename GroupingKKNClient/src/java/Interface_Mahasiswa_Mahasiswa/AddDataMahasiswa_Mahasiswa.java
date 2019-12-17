@@ -162,7 +162,7 @@ public class AddDataMahasiswa_Mahasiswa extends HttpServlet {
                         + "                                                <option value=\"Pendidikan Guru Sekolah Dasar\">Pendidikan Guru Sekolah Dasar\n"
                         + "                                                <br>\n"
                         + "                                                </option>\n"
-                        + "                                                <option value=\"endidikan Keagamaan Katolik\">Pendidikan Keagamaan Katolik\n"
+                        + "                                                <option value=\"Pendidikan Keagamaan Katolik\">Pendidikan Keagamaan Katolik\n"
                         + "                                                <br>\n"
                         + "                                                </option>\n"
                         + "                                                <option value=\"Pendidikan Kimia\">Pendidikan Kimia\n"
