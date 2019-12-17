@@ -144,7 +144,7 @@ public class CreateGroupKKN_Admin_Success extends HttpServlet {
                     out.println("</tbody>\n"
                             + "            </table>\n"
                             + "        </div>");
-                    out.println("<button class=\"btn btn-primary\" type=\"submit\" style=\"margin-left: 850px;margin-bottom: 50px;margin-top: 50px;width: 100px;height: 40;\">Grouping</button></div>\n"
+                    out.println("<button class=\"btn btn-primary\" type=\"submit\" style=\"margin-left: 850px;margin-bottom: 50px;margin-top: 50px;\">Create Group</button></div>\n"
                             + "    </form>\n"
                             + "    <script src=\"assets/js/jquery.min.js\"></script>\n"
                             + "    <script src=\"assets/bootstrap/js/bootstrap.min.js\"></script>\n"
