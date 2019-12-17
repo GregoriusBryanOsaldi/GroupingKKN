@@ -135,12 +135,12 @@ public class FormEditDataGroup_Admin extends HttpServlet {
                             + "<tbody>\n");
                     out.println("<tr>\n"
                             + "     <td style=\"width:151px;\">ID Kelompok</td>\n"
-                            + "     <td><input readonly=\"readonly\" class=\"border rounded-0\" type=\"text\" style=\"width: 60px;\" name=\"idKelompok\" value=\""
+                            + "     <td><input readonly=\"readonly\" class=\"border rounded-0\" min =\"0\" type=\"text\" style=\"width: 60px;\" name=\"idKelompok\" value=\""
                             + kelompok.getIdKelompok() + "\"></td>\n"
                             + "</tr>");
                     out.println("<tr>\n"
                             + "     <td style=\"width:151px;\">Tingkatan Daerah</td>\n"
-                            + "     <td><input class=\"border rounded-0\" type=\"text\" style=\"width: 350px;\" name=\"tingkatanDaerah\" value=\""
+                            + "     <td><input class=\"border rounded-0\" type=\"text\" min =\"0\" max=\"3\" style=\"width: 350px;\" name=\"tingkatanDaerah\" value=\""
                             + kelompok.getTingkatanDaerah() + "\"></td>\n"
                             + "</tr>");
                     out.println("<tr>\n"
