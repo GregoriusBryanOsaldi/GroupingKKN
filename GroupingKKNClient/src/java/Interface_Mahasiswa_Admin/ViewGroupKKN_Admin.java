@@ -200,7 +200,7 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                         out.println(" <table border=\"1\" id=\"tableGroupKKN\" class=\"table\" style=\"width: 1200px\">");
                         for (int i = 0; i < listKelompok.size(); i++) {
                             out.println("<thead>\n"
-                                    + "<th style=\"width: 200px\">Kelompok " + listKelompok.get(i).getIdKelompok() + "</th>\n"
+                                    + "<th style=\"width: 200px\">Kelompok " + (i + 1) + "</th>\n"
                                     + "                    <tr>\n"
                                     + "                        <th>NO.</th>\n"
                                     + "                        <th>NIM</th>\n"
