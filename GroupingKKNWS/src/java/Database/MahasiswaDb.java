@@ -58,6 +58,31 @@ public class MahasiswaDb {
         }
     }
 
+    public void editIdKelompokMahasiswa(Mahasiswa mahasiswa) {
+        Connection conn = null;
+        Statement st = null;
+
+        DbConnection dbConn = new DbConnection();
+        conn = dbConn.getConnection();
+
+        String sql = "UPDATE `mahasiswa` SET `id_kelompok` = '" + mahasiswa.getIdKelompok() + "'\n"
+                + "WHERE `nim` = '" + mahasiswa.getNim() + "'";
+        try {
+            st = conn.createStatement();
+            st.executeUpdate(sql);
+            System.out.println("Data berhasil diupdate");
+        } catch (SQLException ex) {
+            System.out.println("Data gagal diupdate");
+        } finally {
+            try {
+                st.close();
+                conn.close();
+            } catch (SQLException ex) {
+                System.out.println("Data gagal diupdate");
+            }
+        }
+    }
+
     public void editDataMahasiswa(Mahasiswa mahasiswa) {
         Connection conn = null;
         Statement st = null;
@@ -464,7 +489,7 @@ public class MahasiswaDb {
                 tingkat1.add(sakit.get(i));
             } else if (sakit.get(i).getTingkatanPenyakit().equals("2")) {
                 tingkat2.add(sakit.get(i));
-            } else if (sakit.get(i).getTingkatanPenyakit().equalsIgnoreCase("3")) {
+            } else if (sakit.get(i).getTingkatanPenyakit().equals("3")) {
                 tingkat3.add(sakit.get(i));
             }
         }
@@ -507,15 +532,15 @@ public class MahasiswaDb {
             if (sakit.get(i).getTingkatanPenyakit().equals("1")) {
                 sakit.get(i).setIdKelompok(kelompokTingkat1.get(indexKelompokTingkat1).getIdKelompok());
                 indexKelompokTingkat1++;
-                editDataMahasiswa(sakit.get(i));
+                editIdKelompokMahasiswa(sakit.get(i));
             } else if (sakit.get(i).getTingkatanPenyakit().equals("2")) {
                 sakit.get(i).setIdKelompok(kelompokTingkat2.get(indexKelompokTingkat2).getIdKelompok());
                 indexKelompokTingkat2++;
-                editDataMahasiswa(sakit.get(i));
+                editIdKelompokMahasiswa(sakit.get(i));
             } else if (sakit.get(i).getTingkatanPenyakit().equals("3")) {
-                sakit.get(i).setIdKelompok(kelompokTingkat2.get(indexKelompokTingkat3).getIdKelompok());
+                sakit.get(i).setIdKelompok(kelompokTingkat3.get(indexKelompokTingkat3).getIdKelompok());
                 indexKelompokTingkat3++;
-                editDataMahasiswa(sakit.get(i));
+                editIdKelompokMahasiswa(sakit.get(i));
             }
 
             if (indexKelompokTingkat1 == kelompokTingkat1.size()) {
@@ -526,27 +551,15 @@ public class MahasiswaDb {
                 indexKelompokTingkat3 = 0;
             }
         }
-        for (int i = 0; i < sehat.size(); i++) {
-            if (sehat.get(i).getTingkatanPenyakit().equals("1")) {
-                sehat.get(i).setIdKelompok(kelompokTingkat1.get(indexKelompokTingkat1).getIdKelompok());
-                indexKelompokTingkat1++;
-                editDataMahasiswa(sehat.get(i));
-            } else if (sehat.get(i).getTingkatanPenyakit().equals("2")) {
-                sehat.get(i).setIdKelompok(kelompokTingkat2.get(indexKelompokTingkat2).getIdKelompok());
-                indexKelompokTingkat2++;
-                editDataMahasiswa(sehat.get(i));
-            } else if (sehat.get(i).getTingkatanPenyakit().equals("3")) {
-                sehat.get(i).setIdKelompok(kelompokTingkat2.get(indexKelompokTingkat3).getIdKelompok());
-                indexKelompokTingkat3++;
-                editDataMahasiswa(sehat.get(i));
-            }
 
-            if (indexKelompokTingkat1 == kelompokTingkat1.size()) {
-                indexKelompokTingkat1 = 0;
-            } else if (indexKelompokTingkat2 == kelompokTingkat2.size()) {
-                indexKelompokTingkat2 = 0;
-            } else if (indexKelompokTingkat3 == kelompokTingkat3.size()) {
-                indexKelompokTingkat3 = 0;
+        int indexKelompokSehat = 0;
+        for (int i = 0; i < sehat.size(); i++) {
+            sehat.get(i).setIdKelompok(klp.get(indexKelompokSehat).getIdKelompok());
+            indexKelompokSehat++;
+            editIdKelompokMahasiswa(sehat.get(i));
+
+            if (indexKelompokSehat == klp.size()) {
+                indexKelompokSehat = 0;
             }
         }
     }
