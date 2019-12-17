@@ -202,6 +202,7 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                             out.println("<thead>\n"
                                     + "<th style=\"width: 200px\">Kelompok " + listKelompok.get(i).getIdKelompok() + "</th>\n"
                                     + "                    <tr>\n"
+                                    + "                        <th>NO.</th>\n"
                                     + "                        <th>NIM</th>\n"
                                     + "                        <th>Nama</th>\n"
                                     + "                        <th>Jenis Kelamin</th>\n"

@@ -119,6 +119,7 @@ public class DeleteDataMahasiswa_Admin extends HttpServlet {
                             + "                    <table class=\"table\">\n"
                             + "                        <thead>\n"
                             + "                    <tr>\n"
+                            + "                        <th>NO.</th>\n"
                             + "                        <th>NIM</th>\n"
                             + "                        <th>Nama</th>\n"
                             + "                        <th>Jenis Kelamin</th>\n"
@@ -130,6 +131,7 @@ public class DeleteDataMahasiswa_Admin extends HttpServlet {
                             + "                        <tbody>");
                     for (int i = 0; i < listMahasiswa.size(); i++) {
                         out.println("<tr>");
+                        out.println("<td>" + (i + 1) + ".</td>\n");
                         out.println("<td>" + listMahasiswa.get(i).getNim() + "</td>\n"
                                 + "<td>" + listMahasiswa.get(i).getNama() + "</td>"
                                 + "<td>" + listMahasiswa.get(i).getJenisKelamin() + "</td>"

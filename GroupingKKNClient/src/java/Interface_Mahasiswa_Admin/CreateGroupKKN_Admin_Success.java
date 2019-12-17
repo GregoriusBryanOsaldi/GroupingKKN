@@ -124,6 +124,7 @@ public class CreateGroupKKN_Admin_Success extends HttpServlet {
                             + "            <table class=\"table\">"
                             + "<thead>\n"
                             + "                    <tr>\n"
+                            + "                        <th>NO.</th>\n"
                             + "                        <th>NIM</th>\n"
                             + "                        <th>Nama</th>\n"
                             + "                        <th>Jenis Kelamin</th>\n"
@@ -134,6 +135,7 @@ public class CreateGroupKKN_Admin_Success extends HttpServlet {
                     out.println("<tbody>\n");
                     for (int j = 0; j < listMahasiswa.size(); j++) {
                         out.println("<tr>");
+                        out.println("<td>" + (j + 1) + ".</td>\n");
                         out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
                                 + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
                                 + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
