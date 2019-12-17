@@ -207,7 +207,7 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                                     + "                        <th>Jenis Kelamin</th>\n"
                                     + "                        <th>Profi</th>\n"
                                     + "                        <th>Tingkatan Penyakit</th>\n"
-                                    + "                        <th>ID Kelompok</th>\n"
+                                    + "                        <th>Tingkatan Kelompok</th>\n"
                                     + "                    </tr>\n"
                                     + "                </thead>");
                             out.println("<tbody>\n");
@@ -219,7 +219,7 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                                             + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
                                             + "<td>" + listMahasiswa.get(j).getProdi() + "</td>"
                                             + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>"
-                                            + "<td>" + listMahasiswa.get(j).getIdKelompok() + "</td>");
+                                            + "<td>" + listKelompok.get(i).getTingkatanDaerah() + "</td>");
                                     out.println("</tr>");
                                 }
                             }
