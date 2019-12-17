@@ -98,7 +98,7 @@ public class EditDataGroup_Admin extends HttpServlet {
                             + "                    </li>\n"
                             + "                    <li> <a href=\"./CreateGroupKKN_Admin\">Create Group KKN</a>\n"
                             + "                    </li>\n"
-                            + "                    <li> <a href=\"./ViewGroupKKN_Admin.html\">View Group KKN</a>\n"
+                            + "                    <li> <a href=\"./ViewGroupKKN_Admin\">View Group KKN</a>\n"
                             + "                    </li>\n"
                             + "                    <li class=\"text-center\" style=\"font-size: 16px;\"><strong>Manage Data Group KKN</strong>\n"
                             + "                    </li>\n"

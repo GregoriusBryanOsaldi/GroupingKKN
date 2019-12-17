@@ -176,7 +176,7 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                                     + "                        <th>NIM</th>\n"
                                     + "                        <th>Nama</th>\n"
                                     + "                        <th>Jenis Kelamin</th>\n"
-                                    + "                        <th>Profi</th>\n"
+                                    + "                        <th>Prodi</th>\n"
                                     + "                        <th>Tingkatan Penyakit</th>\n"
                                     + "                        <th>ID Kelompok</th>\n"
                                     + "                    </tr>\n"
