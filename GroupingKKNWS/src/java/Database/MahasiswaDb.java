@@ -571,7 +571,9 @@ public class MahasiswaDb {
             Connection conn = dbConn.getConnection();
 
             Statement st = conn.createStatement();
-            String sql = "select * from mahasiswa";
+            String sql = "select nim, nama_mhs, jenis_kelamin_mhs, tanggal_lahir_mhs,"
+                + " prodi, fakultas, agama_mhs, total_sks, email_mhs, tingkatan_penyakit, golongan_darah_mhs,"
+                + " tinggi_badan_mhs, berat_badan_mhs, alamat_mhs, no_hp_mhs, id_kelompok from mahasiswa";
 
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
