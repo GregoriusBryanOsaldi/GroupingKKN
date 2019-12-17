@@ -215,15 +215,27 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                             int no = 1;
                             for (int j = 0; j < listMahasiswa.size(); j++) {
                                 if (listMahasiswa.get(j).getIdKelompok().equals(listKelompok.get(i).getIdKelompok())) {
-                                    out.println("<tr>");
-                                    out.println("<td>" + no + ".</td>\n");
-                                    out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
-                                            + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
-                                            + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
-                                            + "<td>" + listMahasiswa.get(j).getProdi() + "</td>"
-                                            + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>"
-                                            + "<td>" + listKelompok.get(i).getTingkatanDaerah() + "</td>");
-                                    out.println("</tr>");
+                                    if (username.equals(listMahasiswa.get(j).getNim())) {
+                                        out.println("<tr bgcolor=\"yellow\">");
+                                        out.println("<td>" + no + ".</td>\n");
+                                        out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
+                                                + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getProdi() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getIdKelompok() + "</td>");
+                                        out.println("</tr>");
+                                    } else {
+                                        out.println("<tr>");
+                                        out.println("<td>" + no + ".</td>\n");
+                                        out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
+                                                + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getProdi() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getIdKelompok() + "</td>");
+                                        out.println("</tr>");
+                                    }
                                     no++;
                                 }
                             }

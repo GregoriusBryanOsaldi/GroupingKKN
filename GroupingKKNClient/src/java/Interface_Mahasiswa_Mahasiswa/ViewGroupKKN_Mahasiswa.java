@@ -92,7 +92,7 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                                 + "                </li>\n"
                                 + "                <li class=\"text-center\" style=\"font-size: 16px;\"><strong>Manage Data Mahasiswa</strong>\n"
                                 + "                </li>\n"
-                                + "                <li> <a href=\"./AddDataMahasiswa_Mahasiswa.html\">Add Data Mahasiswa</a>\n"
+                                + "                <li> <a href=\"./AddDataMahasiswa_Mahasiswa\">Add Data Mahasiswa</a>\n"
                                 + "                </li>\n"
                                 + "                <li> <a href=\"./ViewGroupKKN_Mahasiswa\">View Group KKN</a>\n"
                                 + "                </li>\n"
@@ -185,15 +185,27 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                             int no = 1;
                             for (int j = 0; j < listMahasiswa.size(); j++) {
                                 if (listMahasiswa.get(j).getIdKelompok().equals(listKelompok.get(i).getIdKelompok())) {
-                                    out.println("<tr>");
-                                    out.println("<td>" + no + ".</td>\n");
-                                    out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
-                                            + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
-                                            + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
-                                            + "<td>" + listMahasiswa.get(j).getProdi() + "</td>"
-                                            + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>"
-                                            + "<td>" + listMahasiswa.get(j).getIdKelompok() + "</td>");
-                                    out.println("</tr>");
+                                    if (username.equals(listMahasiswa.get(j).getNim())) {
+                                        out.println("<tr bgcolor=\"yellow\">");
+                                        out.println("<td>" + no + ".</td>\n");
+                                        out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
+                                                + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getProdi() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getIdKelompok() + "</td>");
+                                        out.println("</tr>");
+                                    } else {
+                                        out.println("<tr>");
+                                        out.println("<td>" + no + ".</td>\n");
+                                        out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
+                                                + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getProdi() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>"
+                                                + "<td>" + listMahasiswa.get(j).getIdKelompok() + "</td>");
+                                        out.println("</tr>");
+                                    }
                                     no++;
                                 }
                             }

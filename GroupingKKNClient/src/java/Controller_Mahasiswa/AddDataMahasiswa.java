@@ -87,7 +87,7 @@ public class AddDataMahasiswa extends HttpServlet {
         if (usernameTemp.equals("P.")) {
             response.sendRedirect("./AddDataMahasiswa_Admin_Success.html");
         } else {
-            response.sendRedirect("./AddDataMahasiswa_Mahasiswa_Success.html");
+            response.sendRedirect("./AddDataMahasiswa_Mahasiswa_Success");
         }
     }
 
