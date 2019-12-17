@@ -253,6 +253,17 @@ select {
     border-style: none;
 }
 
+/* Hide arrow/spinner for number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide arrow for Firefox */
+input[type=number] {
+    -moz-appearance:textfield;
+}
 input[type=checkbox],input[type=radio] {
     box-sizing: border-box;
     padding: 0;
