@@ -156,7 +156,7 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                                 + "                </li>\n"
                                 + "                <li class=\"text-center\" style=\"font-size: 16px;\"><strong>Manage Data Mahasiswa</strong>\n"
                                 + "                </li>\n"
-                                + "                <li> <a href=\"./AddDataMahasiswa_Mahasiswa.html\">Add Data Mahasiswa</a>\n"
+                                + "                <li> <a href=\"./AddDataMahasiswa_Mahasiswa\">Add Data Mahasiswa</a>\n"
                                 + "                </li>\n"
                                 + "                <li> <a href=\"./ViewGroupKKN_Mahasiswa\">View Group KKN</a>\n"
                                 + "                </li>\n"
