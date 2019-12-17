@@ -177,8 +177,6 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                                     + "                        <th>Nama</th>\n"
                                     + "                        <th>Jenis Kelamin</th>\n"
                                     + "                        <th>Prodi</th>\n"
-                                    + "                        <th>Tingkatan Penyakit</th>\n"
-                                    + "                        <th>ID Kelompok</th>\n"
                                     + "                    </tr>\n"
                                     + "                </thead>");
                             out.println("<tbody>\n");
@@ -191,9 +189,7 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                                         out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
                                                 + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
                                                 + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
-                                                + "<td>" + listMahasiswa.get(j).getProdi() + "</td>"
-                                                + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>"
-                                                + "<td>" + listMahasiswa.get(j).getIdKelompok() + "</td>");
+                                                + "<td>" + listMahasiswa.get(j).getProdi() + "</td>");
                                         out.println("</tr>");
                                     } else {
                                         out.println("<tr>");
@@ -201,9 +197,7 @@ public class ViewGroupKKN_Mahasiswa extends HttpServlet {
                                         out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
                                                 + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
                                                 + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
-                                                + "<td>" + listMahasiswa.get(j).getProdi() + "</td>"
-                                                + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>"
-                                                + "<td>" + listMahasiswa.get(j).getIdKelompok() + "</td>");
+                                                + "<td>" + listMahasiswa.get(j).getProdi() + "</td>");
                                         out.println("</tr>");
                                     }
                                     no++;
