@@ -215,6 +215,7 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                             for (int j = 0; j < listMahasiswa.size(); j++) {
                                 if (listMahasiswa.get(j).getIdKelompok().equals(listKelompok.get(i).getIdKelompok())) {
                                     out.println("<tr>");
+                                    out.println("<td>" + (j + 1) + ".</td>\n");
                                     out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
                                             + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
                                             + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
