@@ -212,10 +212,11 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                                     + "                    </tr>\n"
                                     + "                </thead>");
                             out.println("<tbody>\n");
+                            int no = 0;
                             for (int j = 0; j < listMahasiswa.size(); j++) {
                                 if (listMahasiswa.get(j).getIdKelompok().equals(listKelompok.get(i).getIdKelompok())) {
                                     out.println("<tr>");
-                                    out.println("<td>" + (j + 1) + ".</td>\n");
+                                    out.println("<td>" + no + ".</td>\n");
                                     out.println("<td>" + listMahasiswa.get(j).getNim() + "</td>\n"
                                             + "<td>" + listMahasiswa.get(j).getNama() + "</td>"
                                             + "<td>" + listMahasiswa.get(j).getJenisKelamin() + "</td>"
@@ -223,6 +224,7 @@ public class ViewGroupKKN_Admin extends HttpServlet {
                                             + "<td>" + listMahasiswa.get(j).getTingkatanPenyakit() + "</td>"
                                             + "<td>" + listKelompok.get(i).getTingkatanDaerah() + "</td>");
                                     out.println("</tr>");
+                                    no++;
                                 }
                             }
                             out.print("<tr><td></td> <td></td></tr>");
