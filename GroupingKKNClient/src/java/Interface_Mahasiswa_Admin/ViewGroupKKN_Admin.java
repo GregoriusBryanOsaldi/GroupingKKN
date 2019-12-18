@@ -48,7 +48,7 @@ public class ViewGroupKKN_Admin extends HttpServlet {
             if (usernameTemp.equals("P.")) {
                 ArrayList<Mahasiswa> listMahasiswa = (ArrayList<Mahasiswa>) getListMahasiswa();
                 ArrayList<Kelompok> listKelompok = (ArrayList<Kelompok>) getListGroup();
-                if (listMahasiswa.get(0).getIdKelompok().equals("-")) {
+                if (listMahasiswa.get(0).getIdKelompok().equals("-")||listKelompok.get(0).equals("")) {
                     try (PrintWriter out = response.getWriter()) {
                         /* TODO output your page here. You may use following sample code. */
                         out.println("<html>\n"
