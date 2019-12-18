@@ -75,6 +75,16 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="bacaInformasiKKN">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="bacaInformasiKKNResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="addDataMahasiswa">
 <xs:sequence>
 <xs:element name="mahasiswa" type="tns:mahasiswa" minOccurs="0"/>
@@ -113,16 +123,6 @@
 <xs:complexType name="getListMahasiswaResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:mahasiswa" minOccurs="0" maxOccurs="unbounded"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="bacaInformasiKKN">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="bacaInformasiKKNResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
