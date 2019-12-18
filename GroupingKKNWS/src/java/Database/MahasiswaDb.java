@@ -413,7 +413,7 @@ public class MahasiswaDb {
             mahasiswaTemp.add(pbsiP.get(i));
         }
         for (int i = 0; i < pbiP.size(); i++) {
-            mahasiswaTemp.add(pbsiP.get(i));
+            mahasiswaTemp.add(pbiP.get(i));
         }
         for (int i = 0; i < pbioP.size(); i++) {
             mahasiswaTemp.add(pbioP.get(i));
