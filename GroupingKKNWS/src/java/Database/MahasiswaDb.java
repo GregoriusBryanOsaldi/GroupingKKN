@@ -27,7 +27,7 @@ public class MahasiswaDb {
         conn = dbConn.getConnection();
         String sql = "INSERT INTO mahasiswa (nim, nama_mhs, jenis_kelamin_mhs, tanggal_lahir_mhs,"
                 + " prodi, fakultas, agama_mhs, total_sks, email_mhs, tingkatan_penyakit, golongan_darah_mhs,"
-                + " tinggi_badan_mhs, berat_badan_mhs, alamat_mhs, no_hp_mhs, id_kelompok) VALUES ('"
+                + " tinggi_badan_mhs, berat_badan_mhs, alamat_mhs, no_hp_mhs) VALUES ('"
                 + mahasiswa.getNim() + "','"
                 + mahasiswa.getNama() + "','"
                 + mahasiswa.getJenis_kelamin() + "','"
@@ -42,7 +42,7 @@ public class MahasiswaDb {
                 + mahasiswa.getTinggiBadan() + "','"
                 + mahasiswa.getBeratBadan() + "','"
                 + mahasiswa.getAlamat() + "','"
-                + mahasiswa.getNoHP() + "','-')";
+                + mahasiswa.getNoHP() + "')";
         try {
             st = conn.createStatement();
             st.executeUpdate(sql);
